@@ -194,7 +194,7 @@ function bindDocumentEvent() {
     }, null, "registerListener")
 }
 
-document.addEventListener("deviceready", bindDocumentEvent, false)
+// document.addEventListener("deviceready", bindDocumentEvent, false)
 
 /**
  * @module UrbanAirship
