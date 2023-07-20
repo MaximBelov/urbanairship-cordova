@@ -1,22 +1,54 @@
 {
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "urbanairship-cordova",
-      "urbanairship-accengage-cordova",
-      "urbanairship-hms-cordova"
+  "name": "urbanairship-cordova",
+  "version": "14.10.1",
+  "description": "Urban Airship Cordova plugin",
+  "cordova": {
+    "id": "urbanairship-cordova",
+    "platforms": [
+      "android",
+      "ios"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbanairship/urbanairship-cordova.git"
+  },
+  "keywords": [
+    "cordova",
+    "urbanairship",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=10.0.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=6.2.0"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    }
+  ],
+  "author": "Urban Airship",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/urbanairship/urbanairship-cordova.git",
+  "devDependencies": {
+    "adm-zip": "^0.4.16",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.20.3",
+    "fs": "0.0.1-security",
+    "jsdoc": "^3.6.6",
+    "minami": "1.2.3",
+    "semver": "^5.7.1",
+    "superagent": "^4.1.0"
+  },
   "scripts": {
-    "generate-docs": "yarn workspace urbanairship-cordova run generate-docs",
-    "create-sample": "bash ./scripts/create_sample.sh ../cordova-sample",
-    "build-android": "cd ../cordova-sample/test; cordova build android",
-    "build-ios": "cd ../cordova-sample/test; cordova build ios",
-    "run-android": "cd ../cordova-sample/test; cordova run android",
-    "run-ios": "cd ../cordova-sample/test; cordova run ios",
-    "add-accengage-module": "cd ../cordova-sample/test; cordova plugin add ../../urbanairship-cordova/urbanairship-accengage-cordova",
-    "remove-accengage-module": "cd ../cordova-sample/test; cordova plugin rm urbanairship-accengage-cordova",
-    "add-hms-module": "cd ../cordova-sample/test; cordova plugin add ../../urbanairship-cordova/urbanairship-hms-cordova",
-    "remove-hms-module": "cd ../cordova-sample/test; cordova plugin rm urbanairship-hms-cordova"
+    "generate-docs": "jsdoc ./www/UrbanAirship.js -t ../node_modules/minami/ -r ../jsdoc_readme.md -d ../jsdoc_out"
   }
 }
