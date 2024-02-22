@@ -22,10 +22,10 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
-            <preference name="GradlePluginGoogleServicesEnabled" value="true" />
-            <preference name="GradlePluginGoogleServicesVersion" value="4.3.10" />
-        </config-file>
+<!--        <config-file target="config.xml" parent="/*">-->
+<!--            <preference name="GradlePluginGoogleServicesEnabled" value="false" />-->
+<!--            <preference name="GradlePluginGoogleServicesVersion" value="4.3.10" />-->
+<!--        </config-file>-->
         <config-file parent="/widget" target="res/xml/config.xml">
             <feature name="UAirship">
                 <param
