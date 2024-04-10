@@ -1,0 +1,6 @@
+!test/google-services.json
+test/node_modules/*
+test/platforms/*
+test/plugins/*
+test/build.json
+test/google-services.json

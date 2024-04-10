@@ -1,0 +1,7 @@
+{
+  "name": "airship",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "custom"
+}

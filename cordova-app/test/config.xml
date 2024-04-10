@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.frs.hwfab" version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>AirshipCordova</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="com.urbanairship.development_app_key" value="58NiR4xfTHGUaQb8B7J82Q" />
+    <preference name="com.urbanairship.development_app_secret" value="1alTf_dlQ2-f0OaByNBhhA" />
+    <preference name="com.urbanairship.production_app_key" value="58NiR4xfTHGUaQb8B7J82Q" />
+    <preference name="com.urbanairship.production_app_secret" value="1alTf_dlQ2-f0OaByNBhhA" />
+    <preference name="com.urbanairship.gcm_sender" value="sender:510659869242" />
+    <preference name="com.urbanairship.notification_accent_color" value="#007CC2" />
+    <preference name="com.urbanairship.ios_foreground_notification_presentation_alert" value="true" />
+    <preference name="com.urbanairship.ios_foreground_notification_presentation_badge" value="true" />
+    <preference name="com.urbanairship.ios_foreground_notification_presentation_sound" value="true" />
+    <preference name="com.urbanairship.in_production" value="false" />
+    <preference name="com.urbanairship.development_log_level" value="verbose" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <!-- Edit manifest to add explicit android:exported attribute so that we can target Android 12. -->
+        <edit-config
+                file="AndroidManifest.xml"
+                target="/manifest/application/activity[@android:name='MainActivity']"
+                mode="merge">
+            <activity android:exported="true"></activity>
+        </edit-config>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+    <preference name="AndroidGradlePluginGoogleServicesEnabled" value="true" />
+    <preference name="AndroidXEnabled" value="true" />
+
+    <!-- Deployment target must be >= iOS 14  -->
+    <preference name="deployment-target" value="14.0" />
+
+    <!-- Must be 5.0 -->
+    <preference name="SwiftVersion" value="5.0" />
+
+</widget>

@@ -1,0 +1,24 @@
+{
+  "name": "airshipcordova",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "@ua/cordova-airship": "file:../../cordova-airship",
+    "cordova": "^12.0.0",
+    "cordova-android": "12.0.1",
+    "cordova-ios": "^7.1.0",
+    "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-statusbar": "4.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-statusbar": {},
+      "@ua/cordova-airship": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
