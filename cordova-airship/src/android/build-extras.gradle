@@ -2,13 +2,3 @@ dependencies {
     api "com.urbanairship.android:airship-framework-proxy:6.1.0"
 }
 
-cdvPluginPostBuildExtras.push({
-    android {
-        compileSdkVersion 33
-        
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
-    }
-})
